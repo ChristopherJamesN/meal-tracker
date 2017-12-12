@@ -5,7 +5,7 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    @meals = Meal.where(user_id: current_user.id)
   end
 
   # GET /meals/1
@@ -70,6 +70,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:name, :calories, :protein, :carbs, :fat, :description)
+      params.require(:meal).permit(:name, :calories, :protein, :carbs, :fat, :description, :user_id)
     end
 end

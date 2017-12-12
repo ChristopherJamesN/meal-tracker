@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20171212204403) do
     t.integer "carbs"
     t.integer "fat"
     t.string "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
