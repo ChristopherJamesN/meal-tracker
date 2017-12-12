@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  database: dev_meal_tracker_postgresql
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: test_meal_tracker_postgresql
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: prod_meal_tracker_postgresql
+  pool: 5
+  timeout: 5000
