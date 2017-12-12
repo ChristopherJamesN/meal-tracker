@@ -11,37 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :meal_name %>
+    <%= form.text_field :name, id: :meal_name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :calories %>
-    <%= form.number_field :calories, id: :meal_calories %>
+    <%= form.number_field :calories, id: :meal_calories, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :protein %>
-    <%= form.number_field :protein, id: :meal_protein %>
+    <%= form.number_field :protein, id: :meal_protein, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :carbs %>
-    <%= form.number_field :carbs, id: :meal_carbs %>
+    <%= form.number_field :carbs, id: :meal_carbs, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :fat %>
-    <%= form.number_field :fat, id: :meal_fat %>
+    <%= form.number_field :fat, id: :meal_fat, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :meal_description %>
+    <%= form.text_field :description, id: :meal_description, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </div>
+  <br>
 <% end %>
