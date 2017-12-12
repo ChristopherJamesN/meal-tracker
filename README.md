@@ -1,4 +1,4 @@
-# rails-daily-fantasy-lineup-builder
+# meal-tracker
 A web application that can be used to track meals and calories.
 
 ## Installation
