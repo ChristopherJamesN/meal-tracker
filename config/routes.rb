@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/users/show', to: 'users#show'
   devise_for :users
   resources :meals
   root to: "meals#index"
