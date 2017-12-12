@@ -26,6 +26,7 @@ class MealsController < ApplicationController
   # POST /meals.json
   def create
     @meal = Meal.new(meal_params)
+    current_user.meals << @meal
 
     respond_to do |format|
       if @meal.save
