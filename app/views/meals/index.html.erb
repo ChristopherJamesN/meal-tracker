@@ -22,9 +22,9 @@
         <td><%= meal.carbs %></td>
         <td><%= meal.fat %></td>
         <td><%= meal.description %></td>
-        <td><%= link_to 'View', meal %></td>
-        <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
-        <td><%= link_to 'Delete', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View', meal, class: "btn btn-primary", role: "button" %></td>
+        <td><%= link_to 'Edit', edit_meal_path(meal), class: "btn btn-primary", role: "button" %></td>
+        <td><%= link_to 'Delete', meal, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary", role: "button" %></td>
       </tr>
     <% end %>
       <tr>
