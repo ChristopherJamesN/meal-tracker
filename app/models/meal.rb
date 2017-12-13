@@ -2,6 +2,9 @@ class Meal < ApplicationRecord
    validates :name, :calories, :protein, :carbs, :fat,  :presence => true
    belongs_to :user
 
+   scope :this_weeks_meals, -> { where("DATE(created_at) > ?", (Date.today).to_time - 7.days) }
+   scope :todays_meals, -> { where("DATE(created_at) > ?", (Date.today).to_time - 1.days) }
+
    def self.total_calories
      calories = 0
      Meal.all.each do |meal|

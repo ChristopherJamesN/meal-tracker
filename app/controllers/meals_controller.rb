@@ -8,6 +8,16 @@ class MealsController < ApplicationController
     @meals = Meal.where(user_id: current_user.id)
   end
 
+  def today
+    @meals = Meal.where(user_id: current_user.id).todays_meals
+    render :index
+  end
+
+  def week
+    @meals = Meal.where(user_id: current_user.id).this_weeks_meals
+    render :index
+  end
+
   # GET /meals/1
   # GET /meals/1.json
   def show
