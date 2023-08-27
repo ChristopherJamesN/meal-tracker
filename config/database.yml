@@ -1,4 +1,3 @@
-
 default: &default
   adapter: postgresql
   pool: 5
@@ -9,6 +8,7 @@ development:
   database: dev_meal_tracker_postgresql
   pool: 5
   timeout: 5000
+  port: 5430
 
 test:
   adapter: postgresql
